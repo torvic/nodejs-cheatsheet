@@ -18,6 +18,7 @@ exports.getProduct = (req, res, next) => {
 }
 
 exports.getIndex = (req, res, next) => {
+	debugger;
   Product.fetchAll().then((products) => {
     res.render('shop/index', {
       prods: products,

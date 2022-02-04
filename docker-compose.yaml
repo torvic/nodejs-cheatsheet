@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  express:
+    build: 
+      context: ./
+    ports:
+      - '4000:4000'
+      - '9229:9229'
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV=development

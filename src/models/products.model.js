@@ -7,6 +7,7 @@ const productsPath = path.join(__dirname, '../data', 'products.json')
 console.log('yep products path', productsPath)
 const getProductsFromFile = async () => {
   try {
+		debugger
     const products = await readFile(productsPath);
     return JSON.parse(products.toString());
   } catch (error) {
